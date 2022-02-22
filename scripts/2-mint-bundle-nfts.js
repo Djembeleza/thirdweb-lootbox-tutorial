@@ -5,7 +5,6 @@ async function main() {
     // Paste in the address from when you created the bundle collection module
     const bundleModuleAddress = '0xb436b3504E5dBAF7DA2809a1D8719F2c3cc87D70';
     const bundleModule = sdk.getBundleModule(bundleModuleAddress);
-
     console.log('Creating NFT batch...');
 
     const created = await bundleModule.createAndMintBatch([
