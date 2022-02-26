@@ -90,23 +90,10 @@ export default async function Open(
 
   // TODO: send the reward!
 
-  // Initialize the Thirdweb SDK using the private key that owns the wallet
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    process.env.WALLET_PRIVATE_KEY as string,
-    // Using Polygon Mumbai network
-    ethers.getDefaultProvider("https://winter-icy-sun.matic-testnet.quiknode.pro/f36aa318f8f806e4e15a58ab4a1b6cb9f9e9d9b9/")
-  ),
-);
-
-// Transfer a copy of the pack to the user
-console.log(`Transferring a pack to ${address}...`);
-const packModule = sdk.getPackModule(packAddress);
-const packTokenId = '0';
-// Note that this is async
-packModule.transfer(address, packTokenId, BigNumber.from(1));
-
   res.status(200).json({
     kind: "correct",
   });
+
+
+  
 }
