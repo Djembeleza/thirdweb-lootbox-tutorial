@@ -38,6 +38,11 @@ export default function QuizQuestion({
 
   const { address, provider } = useWeb3();
 
+  
+  if (!address) {
+    return <p>Please connect your wallet to take the quiz!</p>
+  }
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -50,24 +55,19 @@ export default function QuizQuestion({
 
       invariant(provider !== undefined, "Provider must be defined to submit answer");
 
-      const message = "Please sign this message to confirm your identity and submit the answer.This won't cost any gas!";
-      const signedMessage = await provider.getSigner().signMessage(message);
+const message = "Please sign this message to confirm your identity and submit the answer.This won't cost any gas!"
+const signedMessage = await provider.getSigner().signMessage(message)
 
-      const payload: CheckAnswerPayload = {
-        address,
-        questionIndex,
-        answerIndex,
-        message,
-        signedMessage,
-      };
+const payload: CheckAnswerPayload = {
+  questionIndex,
+  answerIndex,
+  message,
+  signedMessage,
+};
 
 
       const checkResponse = await axios.post("/api/check-answer", payload);
       const result = checkResponse.data as CheckAnswerResponse;
-
-      if (!address) {
-        return <p>Please connect your wallet to take the quiz!</p>
-      }
 
       if (result.kind === "error") {
         setError(result.error);
