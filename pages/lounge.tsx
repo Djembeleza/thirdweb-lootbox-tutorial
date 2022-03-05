@@ -91,7 +91,7 @@ return (
       <div>
         <h2 className="text-4xl font-bold">Your Packs</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 mt-4 gap-2">
-          <div className="border border-blue-500 rounded-lg p-4">
+          <div className="rounded-lg p-4">
             <NFT metadata={packNfts[0].metadata} />
             <p className="text-gray-800">Balance: {packNfts[0].ownedByAddress.toString()}</p>
             <OpenButton packModule={packModule} afterOpen={getNfts} />
@@ -105,7 +105,7 @@ return (
     <h2 className="text-4xl font-bold">Your Collection</h2>
     <div className="grid grid-cols-2 md:grid-cols-3 mt-4 gap-2">
       {bundleNfts.map((nft) => (
-        <div className="border border-blue-500 rounded-lg p-4" key={nft.metadata.id}>
+        <div className="rounded-lg p-4" key={nft.metadata.id}>
           <NFT metadata={nft.metadata} />
           <p className="text-gray-800">Balance: {nft.ownedByAddress.toString()}</p>
         </div>

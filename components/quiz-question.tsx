@@ -137,7 +137,7 @@ const payload: CheckAnswerPayload = {
               {questionText}
             </label>
             {image ? (
-              <img src={image} className="object-cover h-48 w-96" alt="" />
+              <img src={image} className="object-cover h-auto w-96" alt="" />
             ) : null}
           </div>
           <fieldset className="mt-4">

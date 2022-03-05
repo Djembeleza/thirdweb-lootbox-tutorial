@@ -7,14 +7,14 @@ export type Question = {
 
 const quizQuestions: Question[] = [
   {
-    questionText: "What do the initials DB in Aston Martin DB11 stand for?",
+    questionText: "What is the name of the Podcast which he co-hosts?",
     image:
-      "https://images.unsplash.com/photo-1642201855395-1c8b44e6e42b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "https://elegant-entertainment.com/wp-content/uploads/2017/11/Images_173.jpg",
     answers: [
-      "Trick question: nothing!",
-      "David Brown",
-      "Drive Better",
-      "Diane Blue",
+      "Podcast and Chill with MacDonald",
+      "Podcast And Chill with MacG",
+      "Podcast and Chill with McGregor",
+      "Podcast and Chill with McGrimm",
     ],
     correctAnswerIndex: 1,
   },
@@ -25,10 +25,10 @@ const quizQuestions: Question[] = [
     correctAnswerIndex: 3,
   },
   {
-    questionText: "Where in the UK is the MINI plant?",
+    questionText: "What is the name of the energetic beverage which this famous celebrity owns?",
     image:
-      "https://images.unsplash.com/photo-1591439346018-9d5df732ab7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
-    answers: ["Oxford", "Cambridge", "London", "Edinburgh"],
+      "https://www.djsproduction.co.za/wp-content/uploads/2020/06/DJ-SBU-4--e1593167191749.jpeg",
+    answers: ["MoFire", "MoTire", "More Fya", "Dj Sbu Turn Up"],
     correctAnswerIndex: 0,
   },
   {
