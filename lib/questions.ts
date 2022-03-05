@@ -33,13 +33,16 @@ const quizQuestions: Question[] = [
   },
   {
     questionText:
-      "Which was the first James Bond film to include an Aston Martin?",
-    answers: ["Dr No", "From Russia with Love", "Goldfinger", "Thunderball"],
+      "Which year was the first democratic elections held?",
+      image: "https://unsplash.com/photos/A_LL11BINvA",
+    answers: ["1986", "1992", "1994", "1998"],
     correctAnswerIndex: 2,
   },
   {
     questionText: "What color were all Ferraris originally?",
-    answers: ["Yellow", "White", "Blue", "Red"],
+    image: 'https://unsplash.com/photos/71jWPWw--Cw',
+    
+    answers: ["Sunflower", "Petunia", "Rose", "Protea"],
     correctAnswerIndex: 3,
   },
 ];
